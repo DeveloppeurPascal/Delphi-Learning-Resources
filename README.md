@@ -19,13 +19,15 @@ Creating the website from MD files is a sort of best of 2 worlds : MD files main
 
 ## How to use it ?
 
-Copy this repository template as a new GitHub repository.
+Copy this repository template as a new repository directly from GitHub.
 
-Change the copyright in "/includes/footer.html" file.
+Remove "/.github" folder or change the sponsor links in it (don't lets mine on your repos !).
 
-Remove .github folder or change the sponsor links in it (don't lets mine on your repos !).
+Change the copyright in "/includes/footer.html" file if you want. By default it displays datas from your GitHub repository datas.
 
-Copy templates files from "/_template_files_for_data_collections" folder to :
+Edit the "/index.html" file to change it's "title" property.
+
+Copy templates files (and rename copies) from "/_template_files_for_data_collections" folder to :
 * "/_data_languages" for languages pages (one file per language)
 * "/_data_topics" for topics pages (one file per language/topic with the same "family" property)
 * "/_data_links" for links (as many files you need per language/topic)
@@ -48,8 +50,16 @@ In the two cases you need a flag. Check if it's already available in "/images" f
 
 This repository was done after creating three "learning resources" websites for [Delphi](https://developpeurpascal.github.io/Delphi-Learning-Resources/), [Lazarus](https://developpeurpascal.github.io/Lazarus-Learning-Resources/) and [Pascal language](https://developpeurpascal.github.io/Pascal-Learning-Resources/) because I think it's simple to personalize and easy to use.
 
-## Happy ? Tell it !
+## Translations
+
+The ordinal standard texts where translated from FR or EN to CN, DE, DK, HU, JP, PL, RU, SE, SP and TR with [Deepl](https://deepl.com) translation service.
+
+## You are happy ? Tell it !
 
 If you like this project and if you use it, tell it.
 
 And if you can please thinks about sponsoring my activities on the web (see links on GitHub) and perhaps subscribing to my [Zone-Abo member ship program](https://zone-abo.fr).
+
+## You are not happy ? Tell it too !
+
+You can contact me from one of my web site, [open a new discussion](https://github.com/DeveloppeurPascal/GitHubPages-Learning-Resources-Template/discussions) or [create an issue](https://github.com/DeveloppeurPascal/GitHubPages-Learning-Resources-Template/issues) if you want to talk or report anything about this project.
