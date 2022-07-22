@@ -1,0 +1,15 @@
+{%- assign global_ok = true -%}
+{%- if page.title -%}
+	{%- assign page_title = page.title -%}
+{%- else -%}
+	{%- assign page_title = "Learning resources for programming" -%}
+{%- endif -%}
+{%- if page.lang -%}
+	{%- assign page_lang=page.lang -%}
+{%- else -%}
+	{%- assign page_lang="en" -%}
+{%- endif -%}
+{%- assign texts=site.translated_texts | where: "lang", page_lang | first -%}
+{%- unless texts -%}
+	{%- assign texts=site.translated_texts | where: "lang", "en" | first -%}
+{%- endunless -%}

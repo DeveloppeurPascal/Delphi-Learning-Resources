@@ -1,0 +1,72 @@
+body {
+	background-color: white;
+	color: black;
+	padding: 1em;
+}
+a img {
+	border-style: none;
+}
+nav {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	text-align: center;
+}
+nav a {
+	background-color: #F5F5DC;
+	color: #000000;
+	font-weight: bold;
+	border-style: none;
+	padding: 0.5em;
+}
+nav a.current {
+	background-color: #DAA520;
+}
+nav a:hover {
+	border-width : 2px;
+	border-color: #191970;
+	border-style: solid;
+	background-color: #B0E0E6;
+	color: #000000;
+}
+h1 {
+	text-align: center;
+}
+h2 {
+	border-top-width: 1px;
+	border-top-color: lightgray;
+	border-top-style: dashed;
+	margin: 1em;
+	padding-top: 1em;
+}
+footer {
+	text-align: center;
+	border-top-width: 2px;
+	border-top-color: lightgray;
+	border-top-style: solid;
+	margin: 1em;
+	padding-top: 1em;
+}
+.warning {
+	color: orange;
+}
+.error {
+	color: red;
+	background-color: yellow;
+}
+.flags {
+}
+.flag {
+	margin: 2em;
+}
+.topics {}
+.topic {}
+.links {}
+.link {}
+.flag_image {
+	max-width: 250px;
+	max-height: 100px;
+}
+.flag_image_thumb {
+	max-width: 250px;
+	max-height: 50px;
+}

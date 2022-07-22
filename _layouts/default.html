@@ -1,0 +1,19 @@
+{%- unless global_ok -%}
+{%- include global_variables.html -%}
+{%- endunless -%}
+<!doctype html>
+<html lang="{{ page_lang }}">
+  <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title }}</title>
+	<link rel="stylesheet" href="{{ "/css/styles.css" | relative_url }}">
+	{% include head.html %}
+  </head>
+  <body>
+	{% include header.html %}
+	{% include navigation.html %}
+	{% include content.html %}
+	{% include footer.html %}
+  </body>
+</html>

@@ -1,0 +1,31 @@
+collections:
+    data_languages:
+        output: true
+    data_topics:
+        output: true
+    data_links:
+        output: false
+    template_files_for_data_collections:
+        output: false
+    translated_texts:
+        output: false
+
+defaults:
+    -
+        scope:
+            path: ""
+            type: data_languages
+        values:
+            layout: language
+    -
+        scope:
+            path: ""
+            type: data_topics
+        values:
+            layout: topic
+    -
+        scope:
+            path: ""
+            type: pages
+        values:
+            layout: default

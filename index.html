@@ -1,0 +1,26 @@
+---
+title: Delphi Learning Resources
+permalink: index.html
+index_page: true
+---
+{%- unless global_ok -%}
+{%- include global_variables.html -%}
+{%- endunless -%}
+<div class="flags">
+{%- assign rien_trouve=true -%}
+{% for language in site.data_languages -%}
+	{%- if language.lang and language.lang_flag and language.lang_name and language.title -%}
+		{%- assign rien_trouve=false -%}
+		{%- capture flag_url -%}
+			/images/{{ language.lang_flag | url_encode }}
+		{%- endcapture -%}
+		<div class="flag">
+			<a href="{{ language.url | relative_url }}"><img src="{{ flag_url | relative_url }}" alt="{{ language.lang_name | escape }}" class="flag_image"></a><br/>
+			<a href="{{ language.url | relative_url }}">{{ language.title }}</a>
+		</div>
+	{%- endif -%}
+{%- endfor %}
+</div>
+{%- if rien_trouve -%}
+	<p class="error" lang="{{ texts.lang }}">{{ texts.error }}: {{ texts.error_nolanguage }}</p>
+{%- endif -%}

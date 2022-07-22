@@ -1,0 +1,56 @@
+---
+layout: default
+---
+{%- unless global_ok -%}
+{%- include global_variables.html -%}
+{%- endunless -%}
+{{ content }}
+
+<h2 lang="{{ texts.lang }}">{{ texts.thistopicinotherlanguages }}</h2>
+{%- assign rien_trouve=true -%}
+{% for topic in site.data_topics -%}
+	{%- if topic.lang and topic.lang!=page.lang and topic.family==page.family and topic.title -%}
+		{%- assign rien_trouve=false -%}
+		{%- assign topic_language=site.data_languages | where: "lang", topic.lang | first -%}
+		{%- capture flag_url -%}
+			/images/{{ topic_language.lang_flag | url_encode }}
+		{%- endcapture -%}
+		<a href="{{ topic.url | relative_url }}" lang="{{ topic.lang }}" title="{{ topic.title | escape }}"><img src="{{ flag_url | relative_url }}" alt="{{ topic_language.lang_name | escape }}" class="flag_image_thumb"></a>&nbsp;
+	{%- endif -%}
+{%- endfor %}
+{%- if rien_trouve -%}
+	<p class="warning" lang="{{ texts.lang }}">{{ texts.error }}: {{ texts.notopicinotherlanguages }}</p>
+{%- endif -%}
+
+<h2 lang="{{ texts.lang }}">{{ texts.availablelinks }}</h2>
+<dl class="links">
+{%- assign rien_trouve=true -%}
+{% for link in site.data_links -%}
+	{%- if link.lang and link.lang==page.lang and link.family==page.family and link.title and link.absolute_url -%}
+		{%- assign rien_trouve=false -%}
+		<dt><a href="{{ link.absolute_url }}">{{ link.title }}</a></dt>
+		<dd>{{ link.content }}</dd>
+	{%- endif %}
+{%- endfor %}
+</dl>
+{%- if rien_trouve -%}
+	<p class="error" lang="{{ texts.lang }}">{{ texts.error }}: {{ texts.error_nolink }}</p>
+{%- endif -%}
+
+
+<h2 lang="{{ texts.lang }}">{{ texts.availablelanguages }}</h2>
+<p>
+{%- assign rien_trouve=true -%}
+{% for language in site.data_languages -%}
+	{%- if language.lang and language.lang_flag and language.lang_name and language.title -%}
+		{%- assign rien_trouve=false -%}
+		{%- capture flag_url -%}
+			/images/{{ language.lang_flag | url_encode }}
+		{%- endcapture -%}
+		<a href="{{ language.url | relative_url }}" lang="{{ language.lang }}"><img src="{{ flag_url | relative_url }}" alt="{{ language.lang_name | escape }}" class="flag_image_thumb"></a>&nbsp;
+	{%- endif -%}
+{%- endfor %}
+{%- if rien_trouve -%}
+	<span class="error" lang="{{ texts.lang }}">{{ texts.error }}: {{ texts.error_nolanguage }}</span>
+{%- endif -%}
+</p>

@@ -1,0 +1,17 @@
+{%- unless global_ok -%}
+{%- include global_variables.html -%}
+{%- endunless -%}
+{%- unless page.index_page -%}
+<nav>
+<a href="{{ "/index.html" | relative_url }}">{{ texts.sitehome }}</a>&nbsp;
+{%- assign language=site.data_languages | where: "lang", page.lang | first -%}
+{%- if language -%}
+	<a href="{{ language.url | relative_url }}"{% unless page.family%} class="current"{% endunless %}>{{ texts.topichome }}</a>&nbsp;
+{%- endif -%}
+{%- for topic in site.data_topics -%}
+	{%- if topic.lang == page.lang -%}
+		<a href="{{ topic.url | relative_url }}"{% if topic.family and page.family and topic.family==page.family %} class="current"{% endif %}>{{ topic.topic_name }}</a>&nbsp;
+	{%- endif -%}
+{%- endfor -%}
+</nav>
+{%- endunless -%}

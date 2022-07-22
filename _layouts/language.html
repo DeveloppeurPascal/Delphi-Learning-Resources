@@ -1,0 +1,39 @@
+---
+layout: default
+---
+{%- unless global_ok -%}
+{%- include global_variables.html -%}
+{%- endunless -%}
+{{ content }}
+
+<h2 lang="{{ texts.lang }}">{{ texts.availabletopics }}</h2>
+<dl class="topics">
+{%- assign rien_trouve=true -%}
+{% for topic in site.data_topics -%}
+	{%- if topic.lang and topic.lang==page_lang and topic.title and topic.summary -%}
+		{%- assign rien_trouve=false -%}
+		<dt><a href="{{ topic.url | relative_url }}">{{ topic.title }}</a></dt>
+		<dd>{{ topic.summary }}</dd>
+	{%- endif -%}
+{%- endfor %}
+</dl>
+{%- if rien_trouve -%}
+	<p class="error" lang="{{ texts.lang }}">{{ texts.error }}: {{ texts.error_notopic }}</p>
+{%- endif -%}
+
+<h2 lang="{{ texts.lang }}">{{ texts.availablelanguages }}</h2>
+<p>
+{%- assign rien_trouve=true -%}
+{% for language in site.data_languages -%}
+	{%- if language.lang and language.lang_flag and language.lang_name and language.title -%}
+		{%- assign rien_trouve=false -%}
+		{%- capture flag_url -%}
+			/images/{{ language.lang_flag | url_encode }}
+		{%- endcapture -%}
+		<a href="{{ language.url | relative_url }}" lang="{{ language.lang }}"><img src="{{ flag_url | relative_url }}" alt="{{ language.lang_name | escape }}" class="flag_image_thumb"></a>&nbsp;
+	{%- endif -%}
+{%- endfor %}
+{%- if rien_trouve -%}
+	<span class="error" lang="{{ texts.lang }}">{{ texts.error }}: {{ texts.error_nolanguage }}</span>
+{%- endif -%}
+</p>
