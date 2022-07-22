@@ -97,6 +97,8 @@ As family property value please use one of them :
 * "training" : for exercizes resources or websites where you can test things. Regular or permanent code challenges can be added there.
 * "sample" : for website sample projects or reposiroties with many samples. Please don't link all GitHub projects about this technology, it's the role of "awesome" repositories. You can link repositories with a lot of samples used to learn things or to use as code snippets.
 * "book" : for online or not books websites
+* "community" : forums and websites where users help each others
+* "usergroup" : users groups in real world (clubs and others)
 
 If you see an other topic to use, please submit an issue or open a discussion.
 
