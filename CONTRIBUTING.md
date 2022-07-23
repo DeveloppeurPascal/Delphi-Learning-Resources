@@ -4,7 +4,7 @@ lang: en
 ---
 # Contributing
 
-This project manages a dataset of website links classified in topics by languages.
+[This project]({{ site.github.repository_url }}) manages a dataset of website links classified in topics by languages.
 
 The idea behind this project is to simplify discovering of websites in developers languages. Search engines have too many results and sometimes it's easier to see a directory of links and choose where to look at than surfing on search results.
 
@@ -103,6 +103,8 @@ As family property value please use one of them :
 * "book" : for online or not books websites
 * "community" : forums and websites where users help each others
 * "usergroup" : users groups in real world (clubs and others)
+* "job" : websites available to find job offers or freelance job targeting this technology (listing générics job site has no totaly interest)
+* "blog" : links to RSS agregators and (maintained / live) blogs about this technology
 
 If you see an other topic to use, please submit an issue or open a discussion.
 

@@ -4,7 +4,7 @@ lang: en
 ---
 # Website template for languages/topics/links websites hosted on Github Pages
 
-This repository is a template for web site generation with MD files.
+[This repository]({{ site.github.repository_url }}) is a template for web site generation with MD files.
 
 ## What does it do ?
 
