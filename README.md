@@ -1,3 +1,7 @@
+---
+title: About this project and website
+lang: en
+---
 # Website template for languages/topics/links websites hosted on Github Pages
 
 This repository is a template for web site generation with MD files.
@@ -52,13 +56,13 @@ This repository was done after creating three "learning resources" websites for 
 
 ## Translations
 
-The ordinal standard texts where translated from FR or EN to CN, DE, DK, HU, JP, PL, RU, SE, SP and TR with [Deepl](https://deepl.com) translation service.
+The original standard texts where translated from FR or EN to CN, DE, DK, HU, JP, PL, RU, SE, SP and TR with [Deepl](https://deepl.com) translation service.
 
 ## You are happy ? Tell it !
 
 If you like this project and if you use it, tell it.
 
-And if you can please thinks about sponsoring my activities on the web (see links on GitHub) and perhaps subscribing to my [Zone-Abo member ship program](https://zone-abo.fr).
+And if you can please thinks about sponsoring my activities on the web (see links on GitHub) and perhaps subscribing to my [Zone-Abo membership program](https://zone-abo.fr).
 
 ## You are not happy ? Tell it too !
 

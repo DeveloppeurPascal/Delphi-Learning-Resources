@@ -1,3 +1,7 @@
+---
+title: How to contribute to this project
+lang: en
+---
 # Contributing
 
 This project manages a dataset of website links classified in topics by languages.
