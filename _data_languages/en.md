@@ -1,8 +1,8 @@
 ---
 lang: en
-lang_name : français
+lang_name : English
 lang_flag: en.gif
 permalink: index-en.html
-title: English online resources about Delphi
+title: English resources on Delphi
 ---
-Directory of english speaking website about Delphi programming, the IDE and the object Pascal language.
+Through this space discover English sites about Delphi, how to use the development environment as well as the provided libraries and the Object Pascal language.
