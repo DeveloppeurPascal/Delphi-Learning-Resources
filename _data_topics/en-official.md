@@ -1,8 +1,8 @@
 ---
 lang: en
 family: official
-topic_name: Must know
-title: The officials websites about Delphi programming
-summary: Embarcadero has many websites wich are listed there.
+topic_name: To know
+title: The official sites to know to do Delphi in English
+summary: Publisher, distributor, license management, official documentation, the essential sites to do programming with Delphi.
 ---
-Look at Embarcadero web sites to have official answers and informations about Delphi programming (IDE and language).
+Publisher, distributor, license management, official documentation, the essential sites to do programming with Delphi.
