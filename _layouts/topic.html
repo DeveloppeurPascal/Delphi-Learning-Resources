@@ -29,7 +29,7 @@ layout: default
 	{%- if link.lang and link.lang==page.lang and link.family==page.family and link.title and link.absolute_url -%}
 		{%- assign rien_trouve=false -%}
 		<dt><a href="{{ link.absolute_url }}">{{ link.title }}</a></dt>
-		<dd>{{ link.content }}</dd>
+		<dd>{{ link.content }}<br>&nbsp;</dd>
 	{%- endif %}
 {%- endfor %}
 </dl>

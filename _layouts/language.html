@@ -13,7 +13,7 @@ layout: default
 	{%- if topic.lang and topic.lang==page_lang and topic.title and topic.summary -%}
 		{%- assign rien_trouve=false -%}
 		<dt><a href="{{ topic.url | relative_url }}">{{ topic.title }}</a></dt>
-		<dd>{{ topic.summary }}</dd>
+		<dd>{{ topic.summary }}<br>&nbsp;</dd>
 	{%- endif -%}
 {%- endfor %}
 </dl>
