@@ -2,7 +2,7 @@
 lang: en
 family: books
 topic_name: Books
-title: The Delphi books in English
-summary: Websites giving books lists for Delphi and Pascal programming.
+title: English books on Delphi
+summary: Discover the books in French about programming in Pascal and Delphi.
 ---
-Websites giving books lists for Delphi and Pascal programming.
+On these sites you will find information about books available in your language to learn programming in Delphi and to improve your skills.
