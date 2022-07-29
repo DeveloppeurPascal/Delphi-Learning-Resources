@@ -1,5 +1,5 @@
 ---
-lang: es
+lang: sp
 family: official
 topic_name: Lo que hay que saber
 title: Los sitios oficiales para saber hacer Delphi en español

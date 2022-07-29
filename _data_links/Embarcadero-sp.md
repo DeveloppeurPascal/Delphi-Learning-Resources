@@ -1,5 +1,5 @@
 ---
-lang: es
+lang: sp
 family: official
 title: Embarcadero Technologies
 absolute_url: https://www.embarcadero.com/es/
