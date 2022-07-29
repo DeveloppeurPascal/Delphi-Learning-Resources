@@ -1,5 +1,5 @@
 ---
-lang: fr
+lang: cn
 family: books
 topic_name: 书籍
 title: 关于德尔菲的中文书籍

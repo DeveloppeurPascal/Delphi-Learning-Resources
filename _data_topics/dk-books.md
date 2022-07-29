@@ -1,5 +1,5 @@
 ---
-lang: fr
+lang: dk
 family: books
 topic_name: Bøger
 title: Danske bøger om Delphi
