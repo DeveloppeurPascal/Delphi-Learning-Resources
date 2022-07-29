@@ -1,6 +1,6 @@
 ---
 lang: en
-family: official
+family: blog
 title: Embarcadero's blogs
 absolute_url: https://blogs.embarcadero.com/
 ---
