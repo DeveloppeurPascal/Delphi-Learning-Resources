@@ -65,8 +65,15 @@ footer {
 .flag_image {
 	max-width: 250px;
 	max-height: 100px;
+	border-width : 1px;
+	border-color: #000000;
+	border-style: solid;
 }
 .flag_image_thumb {
 	max-width: 250px;
 	max-height: 50px;
+	border-width : 1px;
+	border-color: #000000;
+	border-style: solid;
+	margin: 2em;
 }
