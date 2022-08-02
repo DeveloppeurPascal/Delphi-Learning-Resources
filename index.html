@@ -6,11 +6,15 @@ index_page: true
 {%- unless global_ok -%}
 {%- include global_variables.html -%}
 {%- endunless -%}
-<div class="flags">
 {%- assign rien_trouve=true -%}
+{%- assign premier=true -%}
 {% for language in site.data_languages -%}
 	{%- if language.lang and language.lang_flag and language.lang_name and language.title -%}
-		{%- assign rien_trouve=false -%}
+		{%- if premier -%}
+			{%- assign premier=false -%}
+			{%- assign rien_trouve=false -%}
+			<div class="flags">
+		{%- endif -%}
 		{%- capture flag_url -%}
 			/images/{{ language.lang_flag | url_encode }}
 		{%- endcapture -%}
@@ -20,7 +24,8 @@ index_page: true
 		</div>
 	{%- endif -%}
 {%- endfor %}
-</div>
 {%- if rien_trouve -%}
 	<p class="error" lang="{{ texts.lang }}">{{ texts.error }}: {{ texts.error_nolanguage }}</p>
+{%- else -%}
+	</div>
 {%- endif -%}

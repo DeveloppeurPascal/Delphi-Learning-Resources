@@ -7,18 +7,23 @@ layout: default
 {{ content }}
 
 <h2 lang="{{ texts.lang }}">{{ texts.availabletopics }}</h2>
-<dl class="topics">
 {%- assign rien_trouve=true -%}
+{%- assign premier=true -%}
 {% for topic in site.data_topics -%}
 	{%- if topic.lang and topic.lang==page_lang and topic.title and topic.summary -%}
-		{%- assign rien_trouve=false -%}
+		{%- if premier -%}
+			{%- assign premier=false -%}
+			{%- assign rien_trouve=false -%}
+			<dl class="topics">
+		{%- endif -%}
 		<dt><a href="{{ topic.url | relative_url }}">{{ topic.title }}</a></dt>
 		<dd>{{ topic.summary }}<br>&nbsp;</dd>
 	{%- endif -%}
 {%- endfor %}
-</dl>
 {%- if rien_trouve -%}
 	<p class="error" lang="{{ texts.lang }}">{{ texts.error }}: {{ texts.error_notopic }}</p>
+{%- else -%}
+	</dl>
 {%- endif -%}
 
 <h2 lang="{{ texts.lang }}">{{ texts.availablelanguages }}</h2>

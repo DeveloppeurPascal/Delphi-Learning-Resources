@@ -9,24 +9,35 @@ layout: default
 <h2 lang="{{ texts.lang }}">{{ texts.availablelinks }}</h2>
 <dl class="links">
 {%- assign rien_trouve=true -%}
+{%- assign premier=true -%}
 {% for link in site.data_links -%}
 	{%- if link.lang and link.lang==page.lang and link.family==page.family and link.title and link.absolute_url -%}
-		{%- assign rien_trouve=false -%}
+		{%- if premier -%}
+			{%- assign premier=false -%}
+			{%- assign rien_trouve=false -%}
+			<dl class="topics">
+		{%- endif -%}
 		<dt><a href="{{ link.absolute_url }}">{{ link.title }}</a></dt>
 		<dd>{{ link.content }}<br>&nbsp;</dd>
 	{%- endif %}
 {%- endfor %}
-</dl>
 {%- if rien_trouve -%}
 	<p class="error" lang="{{ texts.lang }}">{{ texts.error }}: {{ texts.error_nolink }}</p>
+{%- else -%}
+	</dl>
 {%- endif -%}
 
 
 <h2 lang="{{ texts.lang }}">{{ texts.thistopicinotherlanguages }}</h2>
 {%- assign rien_trouve=true -%}
+{%- assign premier=true -%}
 {% for topic in site.data_topics -%}
 	{%- if topic.lang and topic.lang!=page.lang and topic.family==page.family and topic.title -%}
-		{%- assign rien_trouve=false -%}
+		{%- if premier -%}
+			{%- assign premier=false -%}
+			{%- assign rien_trouve=false -%}
+			<p class="flags">
+		{%- endif -%}
 		{%- assign topic_language=site.data_languages | where: "lang", topic.lang | first -%}
 		{%- capture flag_url -%}
 			/images/{{ topic_language.lang_flag | url_encode }}
@@ -36,6 +47,8 @@ layout: default
 {%- endfor %}
 {%- if rien_trouve -%}
 	<p class="warning" lang="{{ texts.lang }}">{{ texts.error }}: {{ texts.notopicinotherlanguages }}</p>
+{%- else -%}
+	</p>
 {%- endif -%}
 
 <h2 lang="{{ texts.lang }}">{{ texts.availablelanguages }}</h2>
