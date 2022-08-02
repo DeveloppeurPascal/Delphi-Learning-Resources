@@ -1,5 +1,5 @@
 ---
-lang: fr
+lang: fr-
 family: usergroup
 topic_name: Clubs
 title: Les groupes d'utilisateurs francophones sur Delphi

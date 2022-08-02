@@ -1,5 +1,5 @@
 ---
-lang: fr
+lang: fr-
 family: training
 topic_name: Pratiquer
 title: S'entraîner à coder avec Delphi

@@ -1,5 +1,5 @@
 ---
-lang: fr
+lang: fr-
 family: job
 topic_name: Emploi
 title: Du travail et des missions disponibles sur Delphi

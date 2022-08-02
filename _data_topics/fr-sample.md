@@ -1,5 +1,5 @@
 ---
-lang: fr
+lang: fr-
 family: sample
 topic_name: Exemples
 title: Exemples de projets et bouts de code en Delphi
