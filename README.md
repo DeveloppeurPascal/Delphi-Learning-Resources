@@ -66,7 +66,7 @@ And if you can please thinks about sponsoring my activities on the web (see link
 
 ## You are not happy ? Tell it too !
 
-You can contact me from one of my web site, [open a new discussion](https://github.com/DeveloppeurPascal/GitHubPages-Learning-Resources-Template/discussions) or [create an issue](https://github.com/DeveloppeurPascal/GitHubPages-Learning-Resources-Template/issues) if you want to talk or report anything about this project.
+You can contact me from one of my web site, [open a new discussion]({{ site.github.repository_url }}/discussion) or [create an issue]({{ site.github.issues_url }}) if you want to talk or report anything about this project.
 
 ## Support the project and its author
 
